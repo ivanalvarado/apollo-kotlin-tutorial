@@ -5,6 +5,10 @@ plugins {
     id("com.apollographql.apollo3").version("3.0.0")
 }
 
+apollo {
+    packageName.set("com.example.rocketreserver")
+}
+
 android {
     compileSdkVersion(31)
 
