@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
 
-    // test 
+    // test
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.3")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
