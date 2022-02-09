@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.coil)
     implementation(libs.constraintLayout)
     implementation(libs.coreKtx)
+    implementation(libs.hilt)
     implementation(libs.lifecycleRuntimeKtx)
     implementation(libs.material)
     implementation(libs.navigationFragmentKtx)
@@ -53,7 +54,6 @@ dependencies {
     implementation(libs.pagingRuntimeKtx)
     implementation(libs.recyclerView)
     implementation(libs.securityCrypto)
-    implementation(libs.hilt)
 
     kapt(libs.hiltCompiler)
 
