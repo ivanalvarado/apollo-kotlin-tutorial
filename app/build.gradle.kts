@@ -1,7 +1,11 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
     alias(libs.plugins.apolloGraphQl)
 }
 
@@ -32,6 +36,10 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     implementation(libs.apolloRuntime)
     implementation(libs.appcompat)
@@ -45,6 +53,9 @@ dependencies {
     implementation(libs.pagingRuntimeKtx)
     implementation(libs.recyclerView)
     implementation(libs.securityCrypto)
+    implementation(libs.hilt)
+
+    kapt(libs.hiltCompiler)
 
     androidTestImplementation(libs.bundles.androidTest)
 
